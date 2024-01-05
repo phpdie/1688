@@ -53,7 +53,7 @@ class Client
             'client_secret' => $this->appSecret,
             'refresh_token' => $refresh_token,
         ]);
-        return $this->curl($path);
+        return $this->curl($this->gateway . $path);
     }
 
     private function getSign($path, $param)
